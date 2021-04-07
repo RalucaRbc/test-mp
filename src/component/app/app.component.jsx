@@ -1,10 +1,12 @@
 import React from "react";
-import {Test} from "../../smth/test.component";
+import { Test1 } from "../../Test1/Test1.component";
+import { Test2 } from "../../Test2/Test2.component";
 
 export const App = () => {
   return (
     <>
-      <Test />
+      <Test1 />
+      <Test2 />
     </>
   );
 };

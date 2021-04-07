@@ -1,8 +1,8 @@
-import React from "react"
-import {render} from "react-dom"
-import { App } from './component/app/app.component'
+import React from "react";
+import { render } from "react-dom";
+import { App } from "./component/App/App.component";
 
-const app = <App />
-const here = document.querySelector("#here")
+const app = <App />;
+const here = document.querySelector("#here");
 
-render (app, here)
+render(app, here);
