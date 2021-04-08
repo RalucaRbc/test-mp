@@ -2,16 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import { processData, Test1 } from "./Test1.component";
 
-// export const processData = (data, setData) => {
-//   const newData = [];
-//   data.forEach((e) =>
-//     newData.push({ value: e.value * e.multiplier, multiplier: e.multiplier })
-//   );
-//   setData(newData);
-// };
-
 describe("testing the processData function", () => {
-  const data = [];
   const setState = jest.fn();
   const useStateMock = (initState) => [initState, setState];
 
@@ -19,7 +10,7 @@ describe("testing the processData function", () => {
     jest.clearAllMocks();
   });
 
-  it("should render Test component correctly", () => {
+  it("should render Test1 component correctly", () => {
     jest.spyOn(React, "useState").mockImplementation(useStateMock);
     const wrapper = render(<Test1 />);
     expect(wrapper).toMatchSnapshot();

@@ -3,36 +3,56 @@ import * as RI from "./ResultItem.style";
 
 export const ResultItem = ({ type, name, ...rest }) => {
   return (
-    <div>
-      <RI.StyledTitle>{name || ""}</RI.StyledTitle>
+    <RI.StyledWrappper>
+      <RI.StyledTitle>
+        {name
+          ? type === "team"
+            ? `${name} Team`
+            : type === "venue"
+            ? `${name} Bar`
+            : name
+          : ""}
+      </RI.StyledTitle>
       {type === "team" && (
         <div>
-          <RI.StyledSubtitle>{rest.sport}</RI.StyledSubtitle>
           <RI.StyledLogo>
-            <img src={rest.teamCrest} alt={`${name} - ${rest.sport}`} />
+            <img
+              src={rest.teamCrest}
+              alt={`${name} - ${rest.sport}`}
+              width="20px"
+              height="20px"
+            />
           </RI.StyledLogo>
+          <RI.StyledSubtitle>{rest.sport}</RI.StyledSubtitle>
         </div>
       )}
       {type === "venue" && (
         <div>
-          <RI.StyledSubtitle>{rest.distance} miles away</RI.StyledSubtitle>
           <RI.StyledLogo>
-            <img src={rest.image} alt={`${name}`} />
+            <img src={rest.image} alt={`${name}`} width="20px" height="20px" />
           </RI.StyledLogo>
+          <RI.StyledSubtitle>{`${rest.distance} miles away`}</RI.StyledSubtitle>
         </div>
       )}
       {type === "fixture" && (
         <div>
-          <RI.StyledSubtitle>
-            {rest.team1 || ""} - {rest.team2 || ""}
-          </RI.StyledSubtitle>
           <RI.StyledLogo>
-            <img src={rest.sportLogo} alt={`${name || ""}`} />
+            <img
+              src={rest.sportLogo}
+              alt={`${name || ""}`}
+              width="20px"
+              height="20px"
+            />
           </RI.StyledLogo>
+          <RI.StyledSubtitle>
+            {rest.startTime || ""}
+          </RI.StyledSubtitle>
         </div>
       )}
-      <RI.StyledArrow>arrow right icon to be imported</RI.StyledArrow>
+      <RI.StyledArrow>
+        <span className="icon-arrow-right2"></span>
+      </RI.StyledArrow>
       <br />
-    </div>
+    </RI.StyledWrappper>
   );
 };

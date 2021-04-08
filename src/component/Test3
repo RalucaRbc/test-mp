@@ -1,0 +1,7 @@
+Like a real life promise, when a JavaScript Promise is defined this means that at some point in time in the next future it will be resolved or rejected. Digging deeper into what technically a Promise represents, it is the vital to know that it is an object through which we can access the representation of an event as an async operation and its resulting value. 
+
+Through Promises we can see wether the event has been completed or it failed to complete. Promises are stacked in the so called MicroTask queue that is executed before the Callback queue.
+
+The reason why we need Promises starts from the purpose of JavaScript that is single threaded and so 2 or more pieces of code cannot run in the same time.
+
+Take an example where multiple async operations are to be executed. If we are to use Callbacks for them then we will get into the Callback hell. Here comes the Promises and the ease with which instead of passing them, we attach them and we chain them. 

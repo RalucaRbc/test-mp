@@ -13,11 +13,12 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start-old": "react-scripts start",
+    "start": "concurrently \"yarn sjs\" \" react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sjs": "npx json-server --watch --port=3800 src/Test2/test2.json"
+    "sjs": "json-server --watch --port=3800 src/component/Test2/test2.json"
   },
   "eslintConfig": {
     "extends": [
@@ -36,5 +37,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.1",
+    "json-server": "^0.16.3"
   }
 }

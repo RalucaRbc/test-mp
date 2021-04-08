@@ -1,11 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`testing the processData function should render Test component correctly 1`] = `
+exports[`testing the processData function should render Test1 component correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div>
+        <h2>
+          Test 1
+        </h2>
         [{"value":2,"multiplier":2},{"value":3,"multiplier":3}]
         <button
           type="button"
@@ -17,6 +20,9 @@ Object {
   </body>,
   "container": <div>
     <div>
+      <h2>
+        Test 1
+      </h2>
       [{"value":2,"multiplier":2},{"value":3,"multiplier":3}]
       <button
         type="button"

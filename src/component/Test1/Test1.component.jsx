@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const processData = (data) =>
   data.map((e) => ({
@@ -7,7 +7,7 @@ export const processData = (data) =>
   }));
 
 export const Test1 = () => {
-  const [data, setData] = React.useState([
+  const [data, setData] = useState([
     { value: 2, multiplier: 2 },
     { value: 3, multiplier: 3 },
   ]);
