@@ -14,7 +14,7 @@ export const ResultItem = ({ type, name, ...rest }) => {
           : ""}
       </RI.StyledTitle>
       {type === "team" && (
-        <div>
+        <>
           <RI.StyledLogo>
             <img
               src={rest.teamCrest}
@@ -24,18 +24,18 @@ export const ResultItem = ({ type, name, ...rest }) => {
             />
           </RI.StyledLogo>
           <RI.StyledSubtitle>{rest.sport}</RI.StyledSubtitle>
-        </div>
+        </>
       )}
       {type === "venue" && (
-        <div>
+        <>
           <RI.StyledLogo>
             <img src={rest.image} alt={`${name}`} width="20px" height="20px" />
           </RI.StyledLogo>
           <RI.StyledSubtitle>{`${rest.distance} miles away`}</RI.StyledSubtitle>
-        </div>
+        </>
       )}
       {type === "fixture" && (
-        <div>
+        <>
           <RI.StyledLogo>
             <img
               src={rest.sportLogo}
@@ -47,7 +47,7 @@ export const ResultItem = ({ type, name, ...rest }) => {
           <RI.StyledSubtitle>
             {rest.startTime || ""}
           </RI.StyledSubtitle>
-        </div>
+        </>
       )}
       <RI.StyledArrow>
         <span className="icon-arrow-right2"></span>

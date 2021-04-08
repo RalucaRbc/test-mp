@@ -5,7 +5,7 @@ export const StyledWrappper = styled.div`
   margin: 20px 0;
   width: 500px;
   display: grid;
-  grid-template-columns: 50px 1fr 1fr;
+  grid-template-columns: 50px 1fr 20px;
   grid-template-rows: auto auto;
 `;
 
@@ -16,7 +16,7 @@ export const StyledTitle = styled.div`
 
 export const StyledSubtitle = styled.div`
   grid-column: 2/3;
-  grid-row: 1/2;  
+  grid-row: 2/3;  
 `;
 
 export const StyledLogo = styled.div`
